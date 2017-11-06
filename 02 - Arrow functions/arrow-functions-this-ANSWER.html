@@ -72,9 +72,10 @@
         }
 
         this.classList.toggle(first);
-        setTimeout(() => {
+        setTimeout(function () {
+          console.log(this)
           this.classList.toggle(second);
-        }, 250);
+        }.bind(this), 250);
       });
   </script>
 
